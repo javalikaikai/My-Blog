@@ -80,6 +80,11 @@ public class IndexController extends BaseController {
             this.title(request, "第" + p + "页");
         }
         System.out.println("i am dev");
+        System.out.println("i am dev");
+        System.out.println("i am dev");
+        System.out.println("i am dev");
+        System.out.println("i am master");
+        System.out.println("i am master");
         return this.render("index");
     }
 
