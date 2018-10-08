@@ -79,6 +79,17 @@ public class IndexController extends BaseController {
         if (p > 1) {
             this.title(request, "第" + p + "页");
         }
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
         System.out.println("i am dev");
         System.out.println("i am dev");
         System.out.println("i am dev");
