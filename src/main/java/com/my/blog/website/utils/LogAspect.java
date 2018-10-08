@@ -12,19 +12,23 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.sql.DataSource;
 import java.util.Arrays;
 
+/**
+ * 借口aop
+ * Created by wangq on 2017/3/24.
+ */
 @Aspect
 @Component
 public class LogAspect {
-    private static final Logger LOGGER = LoggerFactory.getLogger(LogAspect.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DataSource.class);
 
     @Pointcut("execution(public * com.my.blog.website.controller..*.*(..))")
-    public void webLog() {
-    }
+    public void webLog(){}
 
     @Before("webLog()")
-    public void doBefore(JoinPoint joinPoint) {
+    public void doBefore(JoinPoint joinPoint) throws Throwable {
         // 接收到请求，记录请求内容
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
@@ -33,7 +37,7 @@ public class LogAspect {
     }
 
     @AfterReturning(returning = "object", pointcut = "webLog()")
-    public void doAfterReturning(Object object) {
+    public void doAfterReturning(Object object) throws Throwable {
         // 处理完请求，返回内容
         LOGGER.info("RESPONSE : " + object);
     }
