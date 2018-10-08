@@ -85,6 +85,17 @@ public class IndexController extends BaseController {
         System.out.println("i am dev");
         System.out.println("i am master");
         System.out.println("i am master");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
+        System.out.println("i am yuanlaide");
         return this.render("index");
     }
 
